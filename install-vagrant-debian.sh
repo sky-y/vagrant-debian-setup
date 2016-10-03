@@ -26,7 +26,7 @@ if [[ "$(vagrant plugin list | grep -c 'vagrant-vbguest')" -eq 0 ]]; then
 fi
 
 # VagrantでDebianとして初期設定する
-vagrant init debian/jessie64
+[ ! -f "${dir_vagrant}"/Vagrantfile ] && vagrant init debian/jessie64
 
 # Vagrantfileを書き換える
 curl -fsSL https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/Vagrantfile > "${dir_vagrant}"/Vagrantfile
