@@ -14,9 +14,9 @@ fi
 
 dir_vagrant="$HOME/vagrant-debian"
 
-cd "$HOME" || exit 1
+cd "$HOME"
 [ -d "${dir_vagrant}" ] && mkdir "${dir_vagrant}"
-cd  || exit 1
+cd "${dir_vagrant}"
 
 set -x
 
@@ -27,7 +27,7 @@ vagrant plugin install vagrant-vbguest
 vagrant init debian/jessie64
 
 # Vagrantfileを書き換える
-curl https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/Vagrantfile > "${dir_vagrant}"/Vagrantfile
+curl -fsSL https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/Vagrantfile > "${dir_vagrant}"/Vagrantfile
 
 # Vagrantを起動する
 vagrant up --provider virtualbox
