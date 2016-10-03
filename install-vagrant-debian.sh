@@ -15,7 +15,7 @@ fi
 dir_vagrant="$HOME/vagrant-debian"
 
 cd "$HOME" || exit 1
-[ -d "${dir_vagrant}" ] && mkdir "${dir_vagrant}"
+[ ! -d "${dir_vagrant}" ] && mkdir "${dir_vagrant}"
 cd "${dir_vagrant}" || exit 1
 
 set -x
