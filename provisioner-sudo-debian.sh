@@ -39,7 +39,6 @@ apt-get -y install \
       pkg-config \
       rbenv \
       ruby \
-      ruby-build \
       ruby-dev \
       sqlite3 \
       zlib1g \
