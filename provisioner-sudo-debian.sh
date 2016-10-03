@@ -21,7 +21,7 @@ apt-get -y install \
       libapache2-mod-passenger \
       libc6-dev \
       libc6-dev \
-      libffi-dev
+      libffi-dev \
       libncurses5-dev \
       libreadline6 \
       libreadline6-dev \
@@ -43,6 +43,6 @@ apt-get -y install \
       ruby-dev \
       sqlite3
       zlib1g \
-      zlib1g-dev \
+      zlib1g-dev
 set +x
 
