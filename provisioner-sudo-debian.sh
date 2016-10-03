@@ -7,9 +7,10 @@ set -eu
 # apt: 必要なパッケージをインストールする
 echo '[apt: パッケージのインストール]'
 set -x
-apt update
-apt upgrade
-apt install build-essential \
+apt-get update
+apt-get upgrade
+apt-get install \
+      build-essential \
       apache2 \
       autoconf \
       automake \
