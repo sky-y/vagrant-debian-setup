@@ -3,6 +3,8 @@
 
 # 一般ユーザとして実行すること
 
+set -eu
+
 # rbenvのセットアップ
 echo '[.bash_profile: rbenvの設定]'
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile

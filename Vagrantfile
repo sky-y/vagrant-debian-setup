@@ -69,5 +69,6 @@ Vagrant.configure("2") do |config|
   #   apt-get update
   #   apt-get install -y apache2
   # SHELL
-  config.vm.provision "shell", path: "https://example.com/provisioner.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/provisioner-sudo-debian.sh"
+  config.vm.provision "shell", path: "https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/provisioner-user-rbenv.sh", privileged: false
 end
