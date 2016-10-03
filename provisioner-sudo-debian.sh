@@ -9,7 +9,7 @@ echo '[apt: パッケージのインストール]'
 set -x
 apt-get update
 apt-get upgrade
-apt-get install \
+apt-get -y install \
       build-essential \
       apache2 \
       autoconf \
