@@ -21,7 +21,7 @@ cd "${dir_vagrant}" || exit 1
 set -x
 
 # vagrant-vbguestプラグインをインストールする
-if [[ "$(vagrant plugin list | grep -c 'vagrant-vbguest')" -eq 0 ]]; then 
+if [[ $(vagrant plugin list | grep -c 'vagrant-vbguest') -eq 0 ]]; then 
   vagrant plugin install vagrant-vbguest
 fi
 
