@@ -10,11 +10,11 @@ set -x
 apt-get update
 apt-get upgrade
 apt-get -y install \
-      build-essential \
       apache2 \
       autoconf \
       automake \
       bison \
+      build-essential \
       ca-certificates \
       curl \
       git \
@@ -34,6 +34,8 @@ apt-get -y install \
       libxslt1-dev \
       libyaml-dev \
       ncurses-dev \
+      nodejs\
+      npm\
       openssl \
       patch \
       pkg-config \
