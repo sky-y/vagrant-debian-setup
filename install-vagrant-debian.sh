@@ -14,14 +14,16 @@ fi
 
 dir_vagrant="$HOME/vagrant-debian"
 
-cd "$HOME"
+cd "$HOME" || exit 1
 [ -d "${dir_vagrant}" ] && mkdir "${dir_vagrant}"
-cd "${dir_vagrant}"
+cd "${dir_vagrant}" || exit 1
 
 set -x
 
 # vagrant-vbguestプラグインをインストールする
-vagrant plugin install vagrant-vbguest
+if [[ "$(vagrant plugin list | grep -c 'vagrant-vbguest')" -eq 0 ]]; then 
+  vagrant plugin install vagrant-vbguest
+fi
 
 # VagrantでDebianとして初期設定する
 vagrant init debian/jessie64
