@@ -41,7 +41,7 @@ apt-get -y install \
       ruby \
       ruby-build \
       ruby-dev \
-      sqlite3
+      sqlite3 \
       zlib1g \
       zlib1g-dev
 set +x
