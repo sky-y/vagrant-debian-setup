@@ -29,7 +29,7 @@ fi
 [ ! -f "${dir_vagrant}"/Vagrantfile ] && vagrant init debian/jessie64
 
 # Vagrantfileを書き換える
-curl -fsSL https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/Vagrantfile > "${dir_vagrant}"/Vagrantfile
+curl -fsSL --insecure https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/Vagrantfile > "${dir_vagrant}"/Vagrantfile
 
 # Vagrantを起動する
 vagrant up --provider virtualbox

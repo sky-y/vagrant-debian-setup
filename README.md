@@ -13,5 +13,5 @@ VagrantでRails開発用のDebianをセットアップするためのスクリ�
 
 ### VagrantでDebianをインストールする
 
-    curl -fsSL https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/install-vagrant-debian.sh | bash
+    curl -fsSL --insecure https://raw.githubusercontent.com/sky-y/vagrant-debian-setup/master/install-vagrant-debian.sh | bash
 
