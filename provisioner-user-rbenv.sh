@@ -5,12 +5,6 @@
 
 set -eu
 
-cat <<EOS >> ~/.bash_profile
-if [ -f ~/.bashrc ]; then
-   . ~/.bashrc;
-fi
-EOS
-
 # プロンプトの変更
 echo 'export PS1="[\[\e[35m\]\u\[\e[m\]@\h: \[\e[36m\]\W\[\e[m\]] \\$ "' >> ~/.bashrc
 
@@ -34,8 +28,12 @@ fi
 
 # rbenvでRubyをインストール
 echo '[rbenvでRubyをインストール]'
+target_version='2.3.1'
 set -x
-CONFIGURE_OPTS="--disable-install-rdoc" rbenv install 2.3.1
-rbenv global 2.3.1
+if [[ $(rbenv versions | grep -c ${target_version}) -eq 0 ]]; then 
+  CONFIGURE_OPTS="--disable-install-rdoc" rbenv install ${target_version}
+fi
+rbenv global ${target_version}
+
 rbenv exec gem install bundler pry
 set +x
