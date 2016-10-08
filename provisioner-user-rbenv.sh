@@ -5,6 +5,9 @@
 
 set -eu
 
+# プロンプトの変更
+echo 'export PS1="[\[\e[35m\]\u\[\e[m\]@\h: \[\e[36m\]\W\[\e[m\]] \\$ "' >> ~/.bashrc
+
 # rbenvのセットアップ
 echo '[.bash_profile: rbenvの設定]'
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
