@@ -5,6 +5,12 @@
 
 set -eu
 
+cat <<EOS >> ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+   . ~/.bashrc;
+fi
+EOS
+
 # プロンプトの変更
 echo 'export PS1="[\[\e[35m\]\u\[\e[m\]@\h: \[\e[36m\]\W\[\e[m\]] \\$ "' >> ~/.bashrc
 
