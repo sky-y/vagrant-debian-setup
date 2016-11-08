@@ -7,11 +7,6 @@ if ! command -v vagrant > /dev/null 2>&1; then
   exit 1
 fi
 
-if [[ $(vagrant --version) != *"1.8.6"* ]]; then
-  echo "Vagrantを最新版にアップデートしてください"
-  exit 1
-fi
-
 dir_vagrant="$HOME/vagrant-debian"
 
 cd "$HOME" || exit 1
