@@ -8,7 +8,7 @@ set -eu
 echo '[apt: パッケージのインストール]'
 set -x
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 apt-get -y install \
       apache2 \
       autoconf \
